@@ -22,6 +22,8 @@ public class SpringBeanDemoApplication {
         }
         System.out.println(ctx.getBean("user").toString());
         System.out.println(ctx.getBean("configurator").toString());
+
+        System.out.println(ctx.getBean("datasource").toString());
     }
 
     @Bean

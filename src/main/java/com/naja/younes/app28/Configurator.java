@@ -1,13 +1,13 @@
 package com.naja.younes.app28;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 @Component
-@EnableConfigurationProperties
+@ConfigurationProperties(prefix = "appconfig")
 public class Configurator {
-    @Value("${appconfig.app-name}")
     private String appName;
     private String appDescription;
     private String adminFirstName;

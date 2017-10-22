@@ -8,15 +8,26 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class PageController {
+    @Value("${spring.profiles.active}")
+    private String environment;
 
     @Value("${pageController.message}")
     private String pageControllerMsg;
 
-    @Autowired
     private NotificationService notificationService;
+
+    public NotificationService getNotificationService() {
+        return notificationService;
+    }
+
+    @Autowired
+    public void setNotificationService(NotificationService notificationService) {
+        this.notificationService = notificationService;
+    }
 
     @RequestMapping("/")
     public String home(){
-        return pageControllerMsg;
+        return pageControllerMsg + "\nThe application is running on " + environment + " mode.";
+//        return pageControllerMsg;
     }
 }

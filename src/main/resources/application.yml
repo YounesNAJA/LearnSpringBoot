@@ -5,7 +5,7 @@ server:
   port: 8080
 appconfig:
   app-name: "My Application"
-  app-descriptiom: "Cool Application"
+  app-description: "Cool Application"
   admin-first-name: "Younes"
   admin-last-name: "NAJA"
   admin-email: "naja.younes@gmail.com"
